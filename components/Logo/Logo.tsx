@@ -1,7 +1,9 @@
-import React from "react";
+import React, {FC} from "react";
 
-const Logo = () => {
-  return <div></div>;
+import styles from './Logo.module.css'
+
+const Logo:FC = () => {
+  return <h1 className={styles.logo}>BollyGround</h1>
 };
 
 export default Logo;
