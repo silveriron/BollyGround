@@ -1,22 +1,26 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Button from "./Button";
+import Button from "@mui/material/Button"
 
 export default {
     title: 'Button',
     component: Button,
 } as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = args  => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args)  => <Button {...args}>{args.children}</Button>
 
 export const Default = Template.bind({});
 Default.args = {
-    name: 'Click Me',
+    color: 'primary',
+    children: 'Button',
+    variant: 'contained',
 }
 
-export const redButton = Template.bind({});
-redButton.args = {
-    name: 'Red',
-    style: {backgroundColor: 'red', border: 'none', color: 'white'}
+
+export const Outline = Template.bind({});
+Outline.args = {
+    children: "Button",
+    color: "primary",
+    variant: 'outlined',
 }

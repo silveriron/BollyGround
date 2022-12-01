@@ -1,3 +1,5 @@
+import MuiThemeProvider from "../styles/MuiThemeProvider";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -6,4 +8,12 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+
+const withTemeProvider = (Story) => (
+  <MuiThemeProvider>
+    <Story />
+  </MuiThemeProvider>
+);
+
+export const decorators = [withTemeProvider];

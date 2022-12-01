@@ -8,6 +8,6 @@ const { Default } = composeStories(ButtonStories);
 test("test", () => {
   render(<Default />);
 
-  const clickButton = screen.getByRole("button", { name: /Click Me/i });
+  const clickButton = screen.getByRole("button", { name: /BUTTON/i });
   expect(clickButton).not.toBe(null);
 });
