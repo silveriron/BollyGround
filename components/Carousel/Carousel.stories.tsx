@@ -14,7 +14,7 @@ Default.args = {
     items: [
         {
             src: '/img/carouselimage.png',
-            alt: 'run dog'
+            alt: 'run dog',
         },
         {
             src: '/img/test.png',
