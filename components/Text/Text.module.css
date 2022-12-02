@@ -2,8 +2,18 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
+    color: #1C1C1C;
+}
+
+.mainText {
     font-size: 16px;
     line-height: 30px;
-    color: #1C1C1C;
-    max-width: 460px;
+    
+}
+
+.subText {
+
+    font-size: 12px;
+    line-height: 20px;
+
 }
