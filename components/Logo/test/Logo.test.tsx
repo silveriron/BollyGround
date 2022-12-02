@@ -8,6 +8,6 @@ const {Default} = composeStories(LogoStories)
 test("BollyGround Logo", () => {
   render(<Default />);
 
-  const BollyGroundLogo = screen.getByRole("heading", { name: /Bolly Ground/i });
+  const BollyGroundLogo = screen.getByRole("heading");
   expect(BollyGroundLogo).not.toBe(null);
 });

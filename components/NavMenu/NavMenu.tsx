@@ -20,7 +20,7 @@ const NavMenu:React.FC<NavMenuProps> = ({isActive, name, href, isDark = false}) 
     return (
         <li className={styles.list}>
             
-            <Link href={href} ><a>{bolly}<p>{name}</p></a></Link>
+            <Link href={href} ><a>{bolly}<p>{name.toUpperCase()}</p></a></Link>
         </li>
     );
 };

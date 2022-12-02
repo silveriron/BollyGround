@@ -1,0 +1,8 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 550px;
+    padding: 0;
+    margin: 0;
+}
