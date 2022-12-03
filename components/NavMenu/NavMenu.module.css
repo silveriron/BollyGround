@@ -1,27 +1,32 @@
 .list {
-    
-    list-style: none;
-    height: 40px;
+  list-style: none;
+  height: 40px;
 }
 
 .block {
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-
+  height: 40px;
+  width: 40px;
+  display: inline-block;
 }
 
 .list a {
-    text-decoration: none;
-    color: #1C1C1C;
-    font-size: 20;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-size: 20;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .list p {
-    display: inline-block;
-    margin: 0;
+  display: inline-block;
+  margin: 0;
 }
 
+.textLight {
+  color: #f9f8f9;
+}
+
+.textDark {
+  color: #1c1c1c;
+}

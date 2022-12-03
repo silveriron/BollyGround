@@ -1,14 +1,21 @@
-import { getAllByRole, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { composeStories } from "@storybook/testing-react";
 
-import * as NavBarStories from '../NavBar.stories'
+import mockRouter from "next-router-mock";
 
-const {Default} = composeStories(NavBarStories)
+import * as NavBarStories from "../NavBar.stories";
 
-test('render NavMenu', () => {
-    render(<Default/>)
+const { Default } = composeStories(NavBarStories);
 
-    const navMenu = screen.getAllByRole('link');
+jest.mock("next/router", () => require("next-router-mock"));
+jest.mock("next/dist/client/router", () => require("next-router-mock"));
 
-    expect(navMenu).toHaveLength(4);
-})
+test("render NavMenu", async () => {
+  mockRouter.setCurrentUrl("/");
+
+  render(<Default />);
+
+  const navMenu = await screen.findAllByRole("link");
+
+  expect(navMenu).toHaveLength(4);
+});
