@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import AboutDescSection from "./AboutDescSection";
 
 export default {
-  title: "AboutDescSection",
+  title: "Template/AboutDescSection",
   component: AboutDescSection,
 } as ComponentMeta<typeof AboutDescSection>;
 
