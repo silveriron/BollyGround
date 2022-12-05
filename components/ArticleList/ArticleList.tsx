@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ArticleItem, {ArticleItemProps} from '../ArticleItem/ArticleItem';
+import styles from './ArticleList.module.css'
 
 interface ArticleListProps {
     articles: ArticleItemProps[];
@@ -8,7 +9,7 @@ interface ArticleListProps {
 
 const ArticleList:React.FC<ArticleListProps> = ({articles}) => {
     return (
-        <ul style={{maxWidth: 460}}>
+        <ul className={styles.container}>
             {articles.map((article) => <ArticleItem key={article.title} {...article} />)}
         </ul>
     );

@@ -10,6 +10,7 @@ export interface ArticleItemProps {
     desc: string,
     thumbnail: string,
     timeStamp: string,
+    featured?: boolean
 }
 
 const ArticleItem:React.FC<ArticleItemProps> = ({title, desc, thumbnail, timeStamp}) => {

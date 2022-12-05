@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { composeStories } from "@storybook/testing-react";
 
-import * as AboutDescSection from "../AboutDescSection.stories";
+import * as AboutSection from "../AboutSection.stories";
 
-const { Default } = composeStories(AboutDescSection);
+const { Default } = composeStories(AboutSection);
 
 test("check two image", async () => {
   render(<Default />);

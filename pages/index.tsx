@@ -1,5 +1,5 @@
 import React from "react";
-import AboutDescSection from "../components/AboutDescSection/AboutDescSection";
+import AboutDescSection from "../components/AboutSection/AboutSection";
 
 const aboutData = {
   ttochi: {

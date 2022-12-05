@@ -2,7 +2,7 @@ import React from "react";
 import Content from "../Content/Content";
 import Image from "../Image/Image";
 import BgImage from "next/image";
-import styles from "./AboutDescSection.module.css";
+import styles from "./AboutSection.module.css";
 
 interface AboutProps {
   aboutData: {
@@ -17,7 +17,7 @@ interface AboutProps {
   };
 }
 
-const AboutDescSection: React.FC<AboutProps> = ({ aboutData }) => {
+const AboutSection: React.FC<AboutProps> = ({ aboutData }) => {
   return (
     <section className={styles.section}>
       <BgImage
@@ -51,4 +51,4 @@ const AboutDescSection: React.FC<AboutProps> = ({ aboutData }) => {
   );
 };
 
-export default AboutDescSection;
+export default AboutSection;

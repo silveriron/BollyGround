@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import AboutDescSection from "./AboutDescSection";
+import AboutSection from "./AboutSection";
 
 export default {
-  title: "Template/AboutDescSection",
-  component: AboutDescSection,
-} as ComponentMeta<typeof AboutDescSection>;
+  title: "Template/About Section",
+  component: AboutSection,
+} as ComponentMeta<typeof AboutSection>;
 
 const aboutData = {
   ttochi: {
@@ -20,8 +20,8 @@ const aboutData = {
   },
 };
 
-const Template: ComponentStory<typeof AboutDescSection> = (args) => (
-  <AboutDescSection {...args} />
+const Template: ComponentStory<typeof AboutSection> = (args) => (
+  <AboutSection {...args} />
 );
 
 export const Default = Template.bind({});
