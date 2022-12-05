@@ -1,0 +1,12 @@
+.container {
+    background: #F9F8F9;
+    border: 4px solid #1C1C1C;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 468px;
+    box-sizing: border-box;
+}
+
+.container h2 {
+    margin-top: 15px;
+}
