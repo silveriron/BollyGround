@@ -4,7 +4,7 @@ import Image from "../Image/Image";
 import BgImage from "next/image";
 import styles from "./AboutSection.module.css";
 
-interface AboutProps {
+export interface AboutProps {
   aboutData: {
     ttochi: {
       title: string;
@@ -19,7 +19,7 @@ interface AboutProps {
 
 const AboutSection: React.FC<AboutProps> = ({ aboutData }) => {
   return (
-    <section className={styles.section}>
+    <section className={styles.container}>
       <BgImage
         src="/img/bg.png"
         alt="background image"

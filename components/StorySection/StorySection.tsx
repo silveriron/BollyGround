@@ -6,7 +6,7 @@ import FeaturedArticle from '../FeaturedAricle/FeaturedArticle';
 import Title from '../Title/Title';
 import styles from './StorySection.module.css'
 
-interface StorySectionProps {
+export interface StorySectionProps {
     articles: ArticleItemProps[]
 }
 

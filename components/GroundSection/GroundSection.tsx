@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo';
 import Title from '../Title/Title';
 import styles from './GroundSection.module.css'
 
-interface GroundSectionProps extends CarouselProps {}
+export interface GroundSectionProps extends CarouselProps {}
 
 const GroundSection: React.FC<GroundSectionProps> = ({items}) => {
     const white = '#f9f8f9'
