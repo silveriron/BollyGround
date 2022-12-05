@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import MainPage from "./MainPage";
 
-export const DummyData = {
+const DummyData = {
     items: [
         {
           src: "/img/carouselimage.png",

@@ -1,11 +1,9 @@
 import React from "react";
 import MainPage from "../components/MainPage/MainPage";
 
-import { DummyData } from "../components/MainPage/MainPage.stories";
-
-
 const Home = () => {
-  return <MainPage {...DummyData} />
+  return <div></div>
+
 };
 
 export default Home;
