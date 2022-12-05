@@ -5,7 +5,7 @@ import Title from '../Title/Title';
 
 import styles from './ArticleItem.module.css'
 
-interface ArticleItemProps {
+export interface ArticleItemProps {
     title: string,
     desc: string,
     thumbnail: string,
@@ -14,7 +14,7 @@ interface ArticleItemProps {
 
 const ArticleItem:React.FC<ArticleItemProps> = ({title, desc, thumbnail, timeStamp}) => {
     return (
-        <div className={styles.container}>
+        <li className={styles.container}>
             <div className={styles.imageContainer}>
                 <Image alt={title} height={160} width={230} src={thumbnail}/>
             </div>
@@ -23,7 +23,7 @@ const ArticleItem:React.FC<ArticleItemProps> = ({title, desc, thumbnail, timeSta
                 <Text content={desc} type="sub" />
                 <Text content={timeStamp} type="sub"/>
             </div>
-        </div>
+        </li>
     );
 };
 
