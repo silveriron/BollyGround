@@ -4,6 +4,10 @@
     margin-bottom: 30px;
 }
 
+.container p {
+    margin-top: 10px;
+}
+
 .imageContainer {
     border-radius: 8px;
     overflow: hidden;

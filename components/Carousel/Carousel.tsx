@@ -2,7 +2,7 @@ import React from 'react';
 import CarouselTag from 'react-material-ui-carousel'
 import CarouselItem, {CarouselItemProps} from './CarouselItem';
 
-interface CarouselProps {
+export interface CarouselProps {
     items: Array<CarouselItemProps>
 }
 

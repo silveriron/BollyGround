@@ -1,0 +1,23 @@
+.container {
+    background: #1c1c1c;
+    
+}
+
+.container a {
+    color: var(--light-color);
+}
+
+.container h2 {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+}

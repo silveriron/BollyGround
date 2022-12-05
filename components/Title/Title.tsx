@@ -3,12 +3,16 @@ import styles from './Title.module.css'
 
 interface TitleProps {
     name: string,
-    type: "main" | "sub"
+    type: "main" | "sub",
+    style?: object
 }
 
-const Title:React.FC<TitleProps> = ({name, type}) => {
-    const style = type === 'main' ? styles.mainText : styles.subText
-    return <h2 className={`${style} ${styles.text} `} >{name}</h2>
+const Title:React.FC<TitleProps> = ({name, type, style}) => {
+    if (type === "main") {
+        return <h2 style={style} className={`${styles.mainText} ${styles.text} `} >{name}</h2>
+    } else {
+        return <h3 style={style} className={`${styles.subText} ${styles.text} `} >{name}</h3>
+    }
 };
 
 export default Title;

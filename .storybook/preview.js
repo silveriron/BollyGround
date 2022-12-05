@@ -1,5 +1,6 @@
 import * as NextImage from "next/image";
 import { RouterContext } from "next/dist/shared/lib/router-context";
+import "../styles/globals.css";
 
 import MuiThemeProvider from "../styles/MuiThemeProvider";
 
