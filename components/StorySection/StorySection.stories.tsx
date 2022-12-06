@@ -37,6 +37,5 @@ Default.args = {
             timeStamp: '3 Days ago',
             featured: true
         }
-
     ]
 }

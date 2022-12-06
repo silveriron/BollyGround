@@ -23,7 +23,6 @@ interface MainPageProps extends CarouselProps {
 const MainPage:React.FC<MainPageProps> = ({aboutData, articles, items}) => {
     return (
         <>
-        <NavBar />
         <main>
             <AboutSection aboutData={aboutData} />
             <StorySection articles={articles} />

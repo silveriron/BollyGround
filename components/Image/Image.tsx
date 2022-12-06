@@ -9,18 +9,20 @@ interface ImageProps {
 }
 
 const Image: React.FC<ImageProps> = (props) => {
-  const { width, height, src, alt } = props;
+  // const { width, height } = props;
   return (
-    <div
-      style={{
-        borderRadius: "8px",
-        overflow: "hidden",
-        width: width,
-        height: height,
-      }}
-    >
+    // <div
+    //   style={{
+    //     borderRadius: "8px",
+    //     overflow: "hidden",
+    //     maxWidth: width,
+    //     maxHeight: height,
+    //     width: "100vw",
+    //     height: "100vh"
+    //   }}
+    // >
       <ImageTag {...props} />
-    </div>
+    // </div>
   );
 };
 

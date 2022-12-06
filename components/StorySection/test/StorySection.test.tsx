@@ -10,5 +10,5 @@ test('render Story section, 4 articles', () => {
 
     const title = screen.getAllByRole('heading')
 
-    expect(title).toHaveLength(4);
+    expect(title).toHaveLength(5);
 })
