@@ -21,7 +21,7 @@ const Image: React.FC<ImageProps> = (props) => {
     //     height: "100vh"
     //   }}
     // >
-      <ImageTag {...props} />
+      <ImageTag {...props} style={{borderRadius: "8px"}} />
     // </div>
   );
 };

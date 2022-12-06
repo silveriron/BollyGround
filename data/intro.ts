@@ -10,3 +10,58 @@ export const aboutData = {
       "공사장을 떠돌며 인부 아저씨들한테 밥을 얻어먹으며 살던 강아지 볼리는 주말에는 아무도 자신을 찾아오지 않아서 슬펐어요. 그러던 어느날 언제인가 한번 본 적 있는 사람이 아무도 찾지 않는 주말에 찾아왔고, 지저분한 몰골과 여기저기 붙어 있는 진드기를 보고 같이 가자고 해서 따라 가게 되었어요. 지금은 매일 이뻐해주고 산책도 해주고 맛있는 간식도 주는 가족이 생겼어요.",
   },
 };
+
+export const photoData = {
+  bolly: [
+    {
+      title: "bolly1",
+      src: "/img/bolly.png",
+      width: 260,
+      height: 210,
+    },
+    {
+      title: "bolly2",
+      src: "/img/bolly.png",
+      width: 260,
+      height: 210,
+    },
+    {
+      title: "bolly3",
+      src: "/img/bolly.png",
+      width: 260,
+      height: 210,
+    },
+    {
+      title: "bolly4",
+      src: "/img/bolly.png",
+      width: 260,
+      height: 210,
+    },
+  ],
+  ttochi: [
+    {
+      title: "ttochi1",
+      src: "/img/ttochi.png",
+      width: 260,
+      height: 210,
+    },
+    {
+      title: "ttochi2",
+      src: "/img/ttochi.png",
+      width: 260,
+      height: 210,
+    },
+    {
+      title: "ttochi3",
+      src: "/img/ttochi.png",
+      width: 260,
+      height: 210,
+    },
+    {
+      title: "ttochi4",
+      src: "/img/ttochi.png",
+      width: 260,
+      height: 210,
+    },
+  ],
+};
