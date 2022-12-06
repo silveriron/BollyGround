@@ -1,11 +1,12 @@
-import React from 'react';
-import AboutSection from '../AboutSection/AboutSection';
-import GroundSection from '../GroundSection/GroundSection';
-import StorySection from '../StorySection/StorySection';
+import React, {Suspense} from 'react';
 import {ArticleItemProps} from '../ArticleItem/ArticleItem'
 import {CarouselProps} from '../Carousel/Carousel'
-import NavBar from '../NavBar/NavBar';
- 
+import CircularProgress from '@mui/material/CircularProgress';
+
+const AboutSection = React.lazy(() => import('../AboutSection/AboutSection'))
+const GroundSection = React.lazy(() => import('../GroundSection/GroundSection'))
+const StorySection = React.lazy(() => import('../StorySection/StorySection'))
+
 interface MainPageProps extends CarouselProps {
     aboutData: {
         ttochi: {
@@ -24,9 +25,11 @@ const MainPage:React.FC<MainPageProps> = ({aboutData, articles, items}) => {
     return (
         <>
         <main>
+            <Suspense fallback={<CircularProgress />}>
             <AboutSection aboutData={aboutData} />
             <StorySection articles={articles} />
             <GroundSection items={items} />
+            </Suspense>
         </main>
         </>
     );
