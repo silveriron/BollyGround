@@ -1,11 +1,18 @@
 import React, {Suspense} from 'react';
+import dynamic from 'next/dynamic';
 import {ArticleItemProps} from '../ArticleItem/ArticleItem'
 import {CarouselProps} from '../Carousel/Carousel'
 import CircularProgress from '@mui/material/CircularProgress';
 
-const AboutSection = React.lazy(() => import('../AboutSection/AboutSection'))
-const GroundSection = React.lazy(() => import('../GroundSection/GroundSection'))
-const StorySection = React.lazy(() => import('../StorySection/StorySection'))
+const AboutSection = dynamic(() => import('../AboutSection/AboutSection'), {
+  suspense: true
+})
+const GroundSection = dynamic(() => import('../GroundSection/GroundSection'), {
+  suspense: true
+})
+const StorySection = dynamic(() => import('../StorySection/StorySection'), {
+  suspense: true
+})
 
 interface MainPageProps extends CarouselProps {
     aboutData: {
