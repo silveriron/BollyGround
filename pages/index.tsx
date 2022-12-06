@@ -1,8 +1,10 @@
 import React from "react";
+
 import MainPage from "../components/MainPage/MainPage";
+import { DummyData } from "../data/mainPage";
 
 const Home = () => {
-  return <div></div>
+  return <MainPage {...DummyData} />
 
 };
 
