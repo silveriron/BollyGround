@@ -1,19 +1,23 @@
 import React from 'react';
+import AuthorInfo from '../AuthorInfo/AuthorInfo';
 
 import Text from '../Text/Text';
 import Title from '../Title/Title';
 import styles from './StoryDetail.module.css'
+import {Article, Author} from '../../constants/type'
 
 interface StoryDetailProps {
-    title: string,
-    content: string
+    article: Article,
 }
 
-const StoryDetail:React.FC<StoryDetailProps> = ({title, content}) => {
+const StoryDetail:React.FC<StoryDetailProps> = ({article}) => {
     return (
         <section className={styles.container}>
-            <Title name={title} type='main'  />
-            <Text content={content} type='main' />
+            <div className={styles.textContainer}>
+            <Title name={article.title} type='main'  />
+            <Text content={article.content} type='main' />
+            </div>
+            <AuthorInfo author={article.author} timestamp={article.timeStamp} />
         </section>
     );
 };

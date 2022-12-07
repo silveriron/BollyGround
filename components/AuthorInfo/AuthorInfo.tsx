@@ -3,13 +3,19 @@ import {Avatar} from '@mui/material'
 
 import styles from './AuthorInfo.module.css'
 import Text from '../Text/Text';
+import { Author } from '../../constants/type';
 
-const AuthorInfo = () => {
+interface AuthorInfoProps {
+    author: Author
+    timestamp: string
+}
+
+const AuthorInfo:React.FC<AuthorInfoProps> = ({author ,timestamp}) => {
     return (
         <div className={styles.container}>
-            <Avatar alt='avatar' src='/img/avatar.png' sx={{width: 44, height: 44}} />
-            <Text content='Author' type='main'/>
-            <Text content='3 days ago' type='sub'/>
+            <Avatar alt={author.name} src={author.avatar} sx={{width: 44, height: 44}} />
+            <Text content={author.name} type='main'/>
+            <Text content={timestamp} type='sub'/>
         </div>
     );
 };
