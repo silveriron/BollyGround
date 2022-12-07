@@ -30,5 +30,49 @@ Default.args = {
             thumbnail: '/img/thumbnail.png',
             timeStamp: '3 Days ago'
         }
-    ]
+    ],
+    size: 'nomal'
+}
+
+export const Search = Template.bind({});
+Search.args = {
+    articles: [
+        {
+            title: 'Ride a mountain',
+            desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. ',
+            thumbnail: '/img/thumbnail.png',
+            timeStamp: '3 Days ago'
+        },
+        {
+            title: 'Ride a mountain2',
+            desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. ',
+            thumbnail: '/img/thumbnail.png',
+            timeStamp: '3 Days ago'
+        },
+        {
+            title: 'Ride a mountain3',
+            desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. ',
+            thumbnail: '/img/thumbnail.png',
+            timeStamp: '3 Days ago'
+        },
+        {
+            title: 'Ride a mountain',
+            desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. ',
+            thumbnail: '/img/thumbnail.png',
+            timeStamp: '3 Days ago'
+        },
+        {
+            title: 'Ride a mountain2',
+            desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. ',
+            thumbnail: '/img/thumbnail.png',
+            timeStamp: '3 Days ago'
+        },
+        {
+            title: 'Ride a mountain3',
+            desc: 'Contrary to popular belief, Lorem Ipsum is not simply random text. ',
+            thumbnail: '/img/thumbnail.png',
+            timeStamp: '3 Days ago'
+        }
+    ],
+    size: "large"
 }

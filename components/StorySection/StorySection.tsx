@@ -17,7 +17,7 @@ const StorySection: React.FC<StorySectionProps> = ({articles}) => {
         <section className={styles.container}>
             <Title name='Our story' type='main' />
             <div className={styles.storyContainer}>
-            <ArticleList articles={defaultArticle} />
+            <ArticleList articles={defaultArticle} size="nomal" />
             <FeaturedArticle {...featuredAricle[0]} />
             </div>
         </section>
