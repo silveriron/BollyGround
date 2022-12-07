@@ -7,7 +7,7 @@ export default {
     component: ArticleItem
 } as ComponentMeta<typeof ArticleItem>
 
-const Template: ComponentStory<typeof ArticleItem> = (args) => <div style={{maxWidth: "460px"}}><ArticleItem {...args} /></div>
+const Template: ComponentStory<typeof ArticleItem> = (args) => <ArticleItem {...args} />
 
 export const Default = Template.bind({});
 Default.args = {

@@ -4,16 +4,10 @@ import Text from '../Text/Text';
 import Title from '../Title/Title';
 
 import styles from './ArticleItem.module.css'
+import { Article } from '../../constants/type';
 
-export interface ArticleItemProps {
-    title: string,
-    desc: string,
-    thumbnail: string,
-    timeStamp: string,
-    featured?: boolean
-}
 
-const ArticleItem:React.FC<ArticleItemProps> = ({title, desc, thumbnail, timeStamp}) => {
+const ArticleItem:React.FC<Article> = ({title, desc, thumbnail, timeStamp}) => {
     return (
         <li className={styles.container}>
             <div className={styles.imageContainer}>

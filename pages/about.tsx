@@ -1,5 +1,8 @@
 import React from "react";
-import AboutPage from "../components/AboutPage/AboutPage";
+import dynamic from 'next/dynamic'
+
+const AboutPage = dynamic(() => import('../components/AboutPage/AboutPage'))
+
 
 const about = () => {
   return <AboutPage />
