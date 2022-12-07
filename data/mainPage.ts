@@ -15,7 +15,7 @@ export const DummyData = {
   ],
   articles: [
     {
-      title: "Ride a mountain",
+      title: "Ride a mountain1",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/thumbnail.png",
       timeStamp: "3 Days ago",
@@ -28,7 +28,7 @@ export const DummyData = {
       },
     },
     {
-      title: "Ride a mountain",
+      title: "Ride a mountain2",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/thumbnail.png",
       timeStamp: "3 Days ago",
@@ -41,7 +41,7 @@ export const DummyData = {
       },
     },
     {
-      title: "Ride a mountain",
+      title: "Ride a mountain3",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/thumbnail.png",
       timeStamp: "3 Days ago",
@@ -54,7 +54,7 @@ export const DummyData = {
       },
     },
     {
-      title: "Ride a mountain",
+      title: "Ride a mountain4",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/featured.png",
       timeStamp: "3 Days ago",

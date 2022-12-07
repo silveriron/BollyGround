@@ -10,6 +10,6 @@ test('render author info component contains avatar, name, timestamp', () => {
     render(<Default />)
 
     expect(screen.getByRole('img'))
-    expect(screen.getByText(/peter/i))
+    expect(screen.getByText(/avatar/i))
     expect(screen.getByText(/days/i))
 })

@@ -13,7 +13,7 @@ interface StoryDetailPageProps {
 const StoryDetailPage:React.FC<StoryDetailPageProps> = ({article, recommend}) => {
     return (
         <main className={styles.container}>
-        <article>
+        <article className={styles.articleContainer}>
             <StoryDetail article={article} />
         </article>
         <RecommendStory articles={recommend} />
