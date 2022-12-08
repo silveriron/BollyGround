@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import dynamic from 'next/dynamic';
-import {ArticleItemProps} from '../ArticleItem/ArticleItem'
+import { Article } from '../../constants/type';
 import {CarouselProps} from '../Carousel/Carousel'
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -25,7 +25,7 @@ interface MainPageProps extends CarouselProps {
           content: string;
         };
       },
-    articles: ArticleItemProps[],
+    articles: Article[],
 }
 
 const MainPage:React.FC<MainPageProps> = ({aboutData, articles, items}) => {
