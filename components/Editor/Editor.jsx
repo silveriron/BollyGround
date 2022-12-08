@@ -5,7 +5,8 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 
 const editorConfiguration = {
     simpleUpload: {
-        uploadUrl: '/api/posts'
+        uploadUrl: '/api/posts',
+        withCredentials: true,
     }
 }
 
