@@ -6,7 +6,7 @@ import PostEditor from '../components/Editor/Editor'
 const AboutPage = dynamic(() => import('../components/AboutPage/AboutPage'))
 
 
-const about = () => {
+const About = () => {
   // return <AboutPage />
   return (
   <div style={{paddingTop: 500}}>
@@ -15,4 +15,4 @@ const about = () => {
     )
 };
 
-export default about;
+export default About;
