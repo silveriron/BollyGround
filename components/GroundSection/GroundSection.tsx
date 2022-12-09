@@ -15,7 +15,7 @@ const GroundSection: React.FC<GroundSectionProps> = ({items}) => {
             <Carousel items={items} />
             <footer className={styles.footer} >
                 <Logo style={{color: white}} />
-                <Link href="/contact">CONTACT US</Link>
+                <Link href="/admin">ADMIN PAGE</Link>
             </footer>
         </section>
     );

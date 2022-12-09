@@ -13,7 +13,6 @@ const editorConfiguration = {
 const PostEditor = () => {
     return (
             <div className="App">
-                <h2>Using CKEditor 5 from online builder in React</h2>
                 <CKEditor
                     editor={ Editor }
                     config={ editorConfiguration }
