@@ -1,0 +1,52 @@
+import mongoose from "mongoose";
+import NextAuth from "next-auth/next";
+import CredentialsProvider from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
+
+import Admin from "../../../models/Admin";
+
+export const authOptions = {
+  providers: [
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: { label: "email", type: "eamil" },
+        password: { label: "password", type: "password" },
+      },
+      async authorize(credentials, req) {
+        const email = credentials?.email;
+        const password = credentials?.password;
+
+        if (!email || !password) {
+          return null;
+        }
+
+        if (!global.mongoose) {
+          try {
+            global.mongoose = await mongoose.connect(process.env.MONGODB_URL!);
+          } catch (e) {
+            console.log(e.message);
+          }
+        }
+
+        const admin = await Admin.findOne({ email });
+
+        if (!admin) {
+          return null;
+        }
+
+        const compare = await bcrypt.compare(password, admin.password);
+
+        if (compare) {
+          return credentials;
+        } else {
+          throw new Error("계정 정보를 확인하세요.");
+        }
+      },
+    }),
+  ],
+  pages: {
+    error: "/",
+  },
+};
+export default NextAuth(authOptions);
