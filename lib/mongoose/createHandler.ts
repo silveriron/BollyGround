@@ -7,10 +7,10 @@ const createHandler = (
 ) => {
   return nextConnect<NextApiRequest, NextApiResponse>({
     onError: (err, req, res) => {
-      res.status(500).json({ message: "something wrong" });
+      res.status(501).json({ message: err.message });
     },
     onNoMatch: (req, res) => {
-      res.status(404).json({ message: "Not Found" });
+      res.status(405).json({ message: "Not Found" });
     },
   }).use(dbConnect, ...middleware);
 };
