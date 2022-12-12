@@ -10,13 +10,14 @@ const editorConfiguration = {
     }
 }
 
-const PostEditor = () => {
+const PostEditor = ({onChange}) => {
     return (
             <div className="App">
                 <CKEditor
                     editor={ Editor }
                     config={ editorConfiguration }
-                    data="<p>Hello from CKEditor 5!</p>"
+                    data=""
+                    onChange={onChange}
                 />
             </div>
         );

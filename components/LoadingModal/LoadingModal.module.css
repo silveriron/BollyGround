@@ -1,0 +1,10 @@
+.modal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 100;
+    width: 95vw;
+    height: 90vh;
+    background: none;
+}
