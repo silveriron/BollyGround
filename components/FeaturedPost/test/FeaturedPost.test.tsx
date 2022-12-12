@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { composeStories } from "@storybook/testing-react";
 
-import * as FeaturedArticleStories from '../FeaturedArticle.stories'
+import * as FeaturedPostStories from '../FeaturedPost.stories'
 
-const { Default } = composeStories(FeaturedArticleStories)
+const { Default } = composeStories(FeaturedPostStories)
 
-test('render Featured Article', () => {
+test('render Featured Post', () => {
     render(<Default/>)
 
     const thumbnail = screen.getByRole('img');

@@ -1,24 +1,24 @@
 import React from 'react';
+import { Post } from '../../constants/type';
+import FeaturedPost from '../FeaturedPost/FeaturedPost';
 
-import { ArticleItemProps } from '../ArticleItem/ArticleItem';
-import ArticleList from '../ArticleList/ArticleList';
-import FeaturedArticle from '../FeaturedAricle/FeaturedArticle';
+import PostList from '../PostList/PostList';
 import Title from '../Title/Title';
 import styles from './StorySection.module.css'
 
 export interface StorySectionProps {
-    articles: ArticleItemProps[]
+    posts: Post[]
 }
 
-const StorySection: React.FC<StorySectionProps> = ({articles}) => {
-    const featuredAricle = articles.filter((article) => article.featured)
-    const defaultArticle = articles.filter((article) => !article.featured)
+const StorySection: React.FC<StorySectionProps> = ({posts}) => {
+    const featuredPost = posts.filter((post) => post.featured)
+    const defaultPosts = posts.filter((post) => !post.featured)
     return (
         <section className={styles.container}>
             <Title name='Our story' type='main' />
             <div className={styles.storyContainer}>
-            <ArticleList articles={defaultArticle} size="nomal" />
-            <FeaturedArticle {...featuredAricle[0]} />
+            <PostList posts={defaultPosts} size="nomal" />
+            <FeaturedPost {...featuredPost[0]} />
             </div>
         </section>
     );

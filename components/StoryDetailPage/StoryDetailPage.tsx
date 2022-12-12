@@ -3,20 +3,20 @@ import RecommendStory from '../RecomendStory/RecommendStory';
 import StoryDetail from '../StoryDetail/StoryDetail';
 
 import styles from './StoryDetailPage.module.css'
-import { Article, Author } from '../../constants/type';
+import { Post } from '../../constants/type';
 
 interface StoryDetailPageProps {
-    article: Article,
-    recommend: Article[]
+    post: Post,
+    recommend: Post[]
 }
 
-const StoryDetailPage:React.FC<StoryDetailPageProps> = ({article, recommend}) => {
+const StoryDetailPage:React.FC<StoryDetailPageProps> = ({post, recommend}) => {
     return (
         <main className={styles.container}>
         <article className={styles.articleContainer}>
-            <StoryDetail article={article} />
+            <StoryDetail post={post} />
         </article>
-        <RecommendStory articles={recommend} />
+        <RecommendStory posts={recommend} />
         </main>
     );
 };

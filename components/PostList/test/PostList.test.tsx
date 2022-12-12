@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { composeStories } from "@storybook/testing-react";
 
-import * as ArticleListStories from '../ArticleList.stories'
+import * as PostListStories from '../PostList.stories'
 
-const {Default} = composeStories(ArticleListStories)
+const {Default} = composeStories(PostListStories)
 
 test('render three aritle items', () => {
     render(<Default/>)

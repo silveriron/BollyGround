@@ -1,13 +1,13 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import ArticleItem from "./ArticleItem";
+import PostItem from "./PostItem";
 
 export default {
     title: 'UI/ArticleItem',
-    component: ArticleItem
-} as ComponentMeta<typeof ArticleItem>
+    component: PostItem
+} as ComponentMeta<typeof PostItem>
 
-const Template: ComponentStory<typeof ArticleItem> = (args) => <ArticleItem {...args} />
+const Template: ComponentStory<typeof PostItem> = (args) => <PostItem {...args} />
 
 export const Default = Template.bind({});
 Default.args = {

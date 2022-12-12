@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { composeStories } from "@storybook/testing-react";
 
-import * as ArticleItemStories from '../ArticleItem.stories'
+import * as PostItemStories from '../PostItem.stories'
 
-const { Default } = composeStories(ArticleItemStories)
+const { Default } = composeStories(PostItemStories)
 
 test('render thumbnail, title, description, timestamp', () => {
     render(<Default/>)

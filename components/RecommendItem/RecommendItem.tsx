@@ -4,9 +4,9 @@ import Text from '../Text/Text';
 import Title from '../Title/Title';
 
 import styles from './RecommendItem.module.css'
-import {Article} from '../../constants/type'
+import {Post} from '../../constants/type'
 
-const RecommendItem: React.FC<Article> = ({title, thumbnail, timeStamp}) => {
+const RecommendItem: React.FC<Post> = ({title, thumbnail, timeStamp}) => {
     return (
         <li className={styles.container}>
             <Image alt={title} height={100} width={100} src={thumbnail} />

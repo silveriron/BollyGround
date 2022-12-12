@@ -1,12 +1,12 @@
 import React from 'react';
+import { Post } from '../../constants/type';
 
-import {ArticleItemProps} from '../ArticleItem/ArticleItem'
 import Image from '../Image/Image';
 import Text from '../Text/Text';
 import Title from '../Title/Title';
-import styles from './FeaturedArticle.module.css'
+import styles from './FeaturedPost.module.css'
 
-const FeaturedArticle:React.FC<ArticleItemProps> = ({title, desc, thumbnail, timeStamp}) => {
+const FeaturedPost:React.FC<Post> = ({title, desc, thumbnail, timeStamp}) => {
     return (
         <div className={styles.container}>
                 <Image alt={title} height={340} width={420} src={thumbnail}/>
@@ -17,4 +17,4 @@ const FeaturedArticle:React.FC<ArticleItemProps> = ({title, desc, thumbnail, tim
     );
 };
 
-export default FeaturedArticle;
+export default FeaturedPost;

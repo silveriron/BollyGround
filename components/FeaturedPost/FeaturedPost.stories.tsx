@@ -1,13 +1,13 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
-import FeaturedArticle from "./FeaturedArticle";
+import FeaturedPost from "./FeaturedPost";
 
 export default {
     title: 'UI/FeaturedArticle',
-    component: FeaturedArticle,
-} as ComponentMeta<typeof FeaturedArticle>
+    component: FeaturedPost,
+} as ComponentMeta<typeof FeaturedPost>
 
-const Template: ComponentStory<typeof FeaturedArticle> = args => <FeaturedArticle {...args} />
+const Template: ComponentStory<typeof FeaturedPost> = args => <FeaturedPost {...args} />
 
 export const Default = Template.bind({})
 Default.args = {

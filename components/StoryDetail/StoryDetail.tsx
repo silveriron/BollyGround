@@ -4,20 +4,20 @@ import AuthorInfo from '../AuthorInfo/AuthorInfo';
 import Text from '../Text/Text';
 import Title from '../Title/Title';
 import styles from './StoryDetail.module.css'
-import {Article, Author} from '../../constants/type'
+import {Post} from '../../constants/type'
 
 interface StoryDetailProps {
-    article: Article,
+    post: Post,
 }
 
-const StoryDetail:React.FC<StoryDetailProps> = ({article}) => {
+const StoryDetail:React.FC<StoryDetailProps> = ({post}) => {
     return (
         <section className={styles.container}>
             <div className={styles.textContainer}>
-            <Title name={article.title} type='main'  />
-            <Text content={article.content} type='main' />
+            <Title name={post.title} type='main'  />
+            <Text content={post.content} type='main' />
             </div>
-            <AuthorInfo author={article.author} timestamp={article.timeStamp} />
+            <AuthorInfo author={post.author} timestamp={post.timeStamp} />
         </section>
     );
 };

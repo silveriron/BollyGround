@@ -13,7 +13,7 @@ export const DummyData = {
       alt: "sleep dog",
     },
   ],
-  articles: [
+  posts: [
     {
       title: "Ride a mountain1",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",

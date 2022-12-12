@@ -12,5 +12,5 @@ const Template: ComponentStory<typeof StoryDetail> = args => <StoryDetail {...ar
 
 export const Default = Template.bind({});
 Default.args = {
-    article: DummyData.articles[0]
+    post: DummyData.posts[0]
 }

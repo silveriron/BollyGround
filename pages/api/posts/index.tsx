@@ -5,7 +5,8 @@ import Post from '../../../models/Post'
 const handler = createHandler();
 
 handler.get(async (req, res) => {
-  
+  const posts = await Post.find()
+  res.status(200).json({posts})
 });
 
 handler.post(async (req, res) => {

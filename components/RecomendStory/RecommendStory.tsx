@@ -3,18 +3,18 @@ import React from 'react';
 import RecommendItem from '../RecommendItem/RecommendItem';
 import Title from '../Title/Title';
 import styles from './RecommendStory.module.css'
-import { Article } from '../../constants/type';
+import { Post } from '../../constants/type';
 
 interface RecommendStoryProps {
-    articles: Article[]
+    posts: Post[]
 }
 
-const RecommendStory: React.FC<RecommendStoryProps> = ({articles}) => {
+const RecommendStory: React.FC<RecommendStoryProps> = ({posts}) => {
     return (
         <aside className={styles.container}>
             <Title name="Recommend" type='main' />
             <ul>
-                {articles.map((article) => <RecommendItem key={article.title} {...article} />)}
+                {posts.map((post) => <RecommendItem key={post.title} {...post} />)}
             </ul>
         </aside>
     );
