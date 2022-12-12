@@ -17,5 +17,5 @@ test("render NavMenu", async () => {
 
   const navMenu = await screen.findAllByRole("link");
 
-  expect(navMenu).toHaveLength(4);
+  expect(navMenu).toHaveLength(5);
 });
