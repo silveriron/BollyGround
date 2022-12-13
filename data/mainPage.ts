@@ -15,6 +15,7 @@ export const DummyData = {
   ],
   posts: [
     {
+      _id: "1",
       title: "Ride a mountain1",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/thumbnail.png",
@@ -28,6 +29,7 @@ export const DummyData = {
       },
     },
     {
+      _id: "2",
       title: "Ride a mountain2",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/thumbnail.png",
@@ -41,6 +43,7 @@ export const DummyData = {
       },
     },
     {
+      _id: "3",
       title: "Ride a mountain3",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/thumbnail.png",
@@ -54,6 +57,7 @@ export const DummyData = {
       },
     },
     {
+      _id: "4",
       title: "Ride a mountain4",
       desc: "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
       thumbnail: "/img/featured.png",

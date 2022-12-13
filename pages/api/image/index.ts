@@ -30,7 +30,7 @@ const upload = multer({
 const handler = createHandler();
 
 handler.post(upload.single("upload"), (req, res) => {
-  res.status(200).json({ url: req.file.location });
+  res.status(200).json({ url: (req.file as Express.MulterS3.File).location });
 });
 
 export default handler;

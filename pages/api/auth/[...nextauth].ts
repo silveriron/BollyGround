@@ -4,6 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 
 import Admin from "../../../models/Admin";
+import { connect } from "../../../lib/mongoose/dbConnect";
 
 export const authOptions = {
   providers: [
@@ -21,10 +22,10 @@ export const authOptions = {
           return null;
         }
 
-        if (!global.mongoose) {
+        if (!connect.mongoose) {
           try {
-            global.mongoose = await mongoose.connect(process.env.MONGODB_URL!);
-          } catch (e) {
+            connect.mongoose = await mongoose.connect(process.env.MONGODB_URL!);
+          } catch (e: any) {
             console.log(e.message);
           }
         }
@@ -38,7 +39,11 @@ export const authOptions = {
         const compare = await bcrypt.compare(password, admin.password);
 
         if (compare) {
-          return credentials;
+          const user = {
+            email: admin.email,
+            id: admin._id,
+          };
+          return user;
         } else {
           throw new Error("계정 정보를 확인하세요.");
         }
