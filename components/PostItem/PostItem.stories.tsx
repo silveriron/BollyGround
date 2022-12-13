@@ -4,7 +4,7 @@ import { DummyData } from "../../data/mainPage";
 import PostItem from "./PostItem";
 
 export default {
-    title: 'UI/ArticleItem',
+    title: 'UI/PostItem',
     component: PostItem
 } as ComponentMeta<typeof PostItem>
 

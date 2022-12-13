@@ -4,7 +4,7 @@ import PostList from "./PostList";
 import { DummyData } from "../../data/mainPage";
 
 export default {
-    title: 'UI/articleList',
+    title: 'UI/PostList',
     component: PostList,
 } as ComponentMeta<typeof PostList>
 

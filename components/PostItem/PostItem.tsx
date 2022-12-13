@@ -19,7 +19,9 @@ const PostItem:React.FC<PostItemProps> = ({ post, size}) => {
     const h = size === 'large' ? 160 : 160
     return (
         <li className={styles.container}>
-            <Link href={`/story/${_id}`}>
+            <Link href={`/story/${_id}`} legacyBehavior>
+                <a>
+
             <div className={styles.imageContainer}>
                 <Image alt={title} height={h} width={w} src={thumbnail}/>
             </div>
@@ -28,6 +30,7 @@ const PostItem:React.FC<PostItemProps> = ({ post, size}) => {
                 <Text content={desc} type="sub" />
                 <Text content={timeStamp} type="sub"/>
             </div>
+                </a>
             </Link>
         </li>
     );
