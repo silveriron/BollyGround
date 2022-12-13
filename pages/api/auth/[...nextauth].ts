@@ -4,7 +4,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 
 import Admin from "../../../models/Admin";
-import { connect } from "../../../lib/mongoose/dbConnect.js";
 
 export const authOptions = {
   secret: process.env.AUTH_SECRET,
@@ -23,9 +22,9 @@ export const authOptions = {
           return null;
         }
 
-        if (!connect.mongoose) {
+        if (!global.mongoose) {
           try {
-            connect.mongoose = await mongoose.connect(process.env.MONGODB_URL!);
+            global.mongoose = await mongoose.connect(process.env.MONGODB_URL!);
           } catch (e: any) {
             console.log(e.message);
           }
