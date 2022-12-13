@@ -7,6 +7,7 @@ import Editor from '../Editor/Editor'
 import styles from './EditorForm.module.css'
 import useInput from '../../hooks/useInput';
 import LoadingModal from '../LoadingModal/LoadingModal';
+import { postImage, uploadPost } from '../../lib/api/api';
 
 const EditorForm = () => {
     const {value: title, onChange: onChangeTitle} = useInput("")
@@ -40,15 +41,12 @@ const EditorForm = () => {
 
         const formData = new FormData();
         formData.append('upload', thumbnail);
-        const thumbnailURL = await (await axios.post('/api/image', formData)).data.url
         
-
         try {
-            const res = await axios.post('/api/posts', {
-                title, desc, content, thumbnail: thumbnailURL
-            })
+            const thumbnailURL = await postImage(formData)
+            const res = uploadPost(title, desc, content, thumbnailURL)
         } catch (e) {
-            
+            alert(e.message)
         }
 
         setIsLoading(false)

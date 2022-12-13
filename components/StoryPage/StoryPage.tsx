@@ -13,7 +13,7 @@ const StoryPage:React.FC<StoryPageProps> = ({posts}) => {
     return (
         <main className={styles.container}>
             <SearchForm />
-            <PostList posts={posts} size="nomal" />
+            <PostList posts={posts} size="large" />
         </main>
     );
 };

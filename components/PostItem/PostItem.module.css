@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .container p {
@@ -12,4 +13,8 @@
     border-radius: 8px;
     overflow: hidden;
     margin-right: 30px;
+}
+
+.textContainer {
+    width: 50%;
 }

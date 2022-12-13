@@ -4,27 +4,11 @@ import styles from "./NavBar.module.css";
 import NavMenu from "../NavMenu/NavMenu";
 import Logo from "../Logo/Logo";
 import { useRouter } from "next/router";
+import {linkList} from '../../data/navList'
 
 const NavBar = () => {
   const path = useRouter().pathname;
-  const linkList = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "Story",
-      href: "/story",
-    },
-    {
-      name: "Ground",
-      href: "/ground",
-    },
-  ];
+
   return (
     <nav className={styles.nav}>
       <div>
@@ -37,7 +21,7 @@ const NavBar = () => {
             name={link.name}
             href={link.href}
             isDark={path === "/" ? true : false}
-            isActive={path === link.href ? true : false}
+            isActive={link.href === '/story' && path.match(/story/i) ? true : path === link.href ? true : false}
           />
         ))}
       </ul>

@@ -12,13 +12,13 @@ interface StoryDetailProps {
 
 const StoryDetail:React.FC<StoryDetailProps> = ({post}) => {
     return (
-        <section className={styles.container}>
+        <div className={styles.container}>
             <div className={styles.textContainer}>
             <Title name={post.title} type='main'  />
-            <Text content={post.content} type='main' />
+            <div dangerouslySetInnerHTML={{__html: post.content}}></div>
             </div>
-            <AuthorInfo author={post.author} timestamp={post.timeStamp} />
-        </section>
+            {/* <AuthorInfo author={post.author} timestamp={post.timeStamp} /> */}
+        </div>
     );
 };
 

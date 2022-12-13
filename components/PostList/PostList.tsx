@@ -11,9 +11,13 @@ interface PostListProps {
 
 const PostList:React.FC<PostListProps> = ({posts, size}) => {
     const style = size === "large" ? {maxWidth: 560} : {maxWidth: 460}
+
+    if (!posts.length) {
+        return <p>작성된 글이 없습니다.</p>
+    }
     return (
         <ul className={styles.container} style={style}>
-            {posts.map((post) => <PostItem key={post.title} {...post} />)}
+            {posts.map((post) => <PostItem key={post.title} post={post} size={size} />)}
         </ul>
     );
 };
