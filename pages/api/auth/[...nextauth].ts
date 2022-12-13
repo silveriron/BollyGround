@@ -4,9 +4,10 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 
 import Admin from "../../../models/Admin";
-import { connect } from "../../../lib/mongoose/dbConnect";
+import { connect } from "../../../lib/mongoose/dbConnect.js";
 
 export const authOptions = {
+  secret: process.env.AUTH_SECRET,
   providers: [
     CredentialsProvider({
       name: "Credentials",

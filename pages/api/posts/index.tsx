@@ -10,7 +10,6 @@ handler.get(async (req, res) => {
 
 handler.post(async (req, res) => {
   const data = req.body;
-  console.log(data);
 
   const newPost = new Post(data);
   try {
