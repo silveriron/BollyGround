@@ -12,6 +12,6 @@ const Template: ComponentStory<typeof AuthorInfo> = args => <AuthorInfo {...args
 
 export const Default = Template.bind({})
 Default.args = {
-    author: DummyData.articles[0].author,
-    timestamp: DummyData.articles[0].timeStamp
+    author: DummyData.posts[0].author,
+    timestamp: DummyData.posts[0].timeStamp
 }
