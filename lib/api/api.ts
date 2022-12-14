@@ -6,9 +6,7 @@ export const getPosts = async () => {
 };
 
 export const getPost = async (id: string) => {
-  console.log(`id: ${id}`);
   const res = await axios.get(`/api/posts/${id}`);
-  console.log(`res: ${res}`);
   return res.data.posts;
 };
 

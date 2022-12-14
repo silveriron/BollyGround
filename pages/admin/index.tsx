@@ -5,12 +5,10 @@ import { useRouter } from 'next/router';
 
 const Admin = () => {
     const {status, data} = useSession()
-    const {push} = useRouter()
-
-
+    const {push, query: {error}} = useRouter()
 
     if (status === 'unauthenticated') {
-        return <LoginPage />
+        return <LoginPage error={error}  />
     } else if (status === 'authenticated') {
         push('/admin/post')
     }
