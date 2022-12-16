@@ -9,8 +9,8 @@ import {ReactQueryDevtools} from 'react-query/devtools'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      cacheTime: 1000 * 60 * 30,
-      staleTime: 1000 * 60 * 30,
+      cacheTime: 1000 * 60 * 5,
+      staleTime: 1000 * 60 * 5,
     }
   }
 });

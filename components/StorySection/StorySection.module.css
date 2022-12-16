@@ -1,6 +1,5 @@
 .storyContainer {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     padding-bottom: 130px;
 }

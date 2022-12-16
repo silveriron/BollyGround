@@ -1,6 +1,9 @@
 .container {
+    list-style: none;
+}
+
+.container a {
     display: flex;
-    flex-direction: row;
     margin-bottom: 30px;
     width: 100%;
 }
