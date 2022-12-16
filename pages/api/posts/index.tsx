@@ -1,5 +1,6 @@
 import createHandler from "../../../lib/mongoose/createHandler";
 import Post from "../../../models/Post";
+import {csrf} from '../../../lib/csrf/csrf'
 
 const handler = createHandler();
 
@@ -20,4 +21,4 @@ handler.post(async (req, res) => {
   }
 });
 
-export default handler;
+export default csrf(handler);

@@ -3,6 +3,7 @@ import multerS3 from "multer-s3";
 import { S3Client } from "@aws-sdk/client-s3";
 
 import createHandler from "../../../lib/mongoose/createHandler";
+import { csrf } from "../../../lib/csrf/csrf";
 
 const { ACCESSKEYID, SECRETACCESSKEY, REGION, BUCKET } = process.env;
 
@@ -33,7 +34,7 @@ handler.post(upload.single("upload"), (req, res) => {
   res.status(200).json({ url: (req.file as Express.MulterS3.File).location });
 });
 
-export default handler;
+export default csrf(handler);
 
 export const config = {
   api: {

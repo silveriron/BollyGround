@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nextConnect, { Middleware } from "next-connect";
 import dbConnect from "./dbConnect.js";
+import { csrf } from "../csrf/csrf";
 
 const createHandler = (
   ...middleware: Middleware<NextApiRequest, NextApiResponse>[]
