@@ -7,6 +7,6 @@ export default {
     component: SearchForm,
 } as ComponentMeta<typeof SearchForm>
 
-const Template: ComponentStory<typeof SearchForm> = args => <SearchForm />
+const Template: ComponentStory<typeof SearchForm> = args => <SearchForm {...args} />
 
 export const Default = Template.bind({});
