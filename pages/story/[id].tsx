@@ -8,7 +8,7 @@ import { getPost, getPosts } from "../../lib/api/api";
 const StoryDetail = () => {
   const router = useRouter();
   const { id } = router.query;
-  const { data: posts } = useQuery<Post[]>("posts", getPosts);
+  const { data: posts } = useQuery<Post[]>("posts", () => getPosts());
   if (!posts) {
     return;
   }
