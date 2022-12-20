@@ -1,7 +1,7 @@
 import axios from "axios";
 import { debounce } from "debounce";
 
-export const getPosts = async (keyword: string) => {
+export const getPosts = async (keyword: string = "") => {
   const res = await axios.get(`/api/posts?keyword=${keyword}`);
   return res.data.posts;
 };

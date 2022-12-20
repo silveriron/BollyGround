@@ -13,7 +13,7 @@ const Home = () => {
     data: posts,
     isLoading,
     isError,
-  } = useQuery<Post[], Error>("posts", getPosts);
+  } = useQuery<Post[], Error>("posts", () => getPosts());
   
   if (isLoading) {
     return <LoadingModal isLoading={true} />;
