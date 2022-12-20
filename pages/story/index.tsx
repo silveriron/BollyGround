@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useQuery } from 'react-query';
 
 import StoryPage from '../../components/StoryPage/StoryPage';
 import { getPosts } from '../../lib/api/api';
 
 const Story = () => {
-    const {data} = useQuery('posts', getPosts)
-    
+    const [keyword, setKeyword] = useState('')
+    const {data: posts} = useQuery(['posts', keyword], () => getPosts(keyword))
 
-    return <StoryPage posts={data} />
+    return <StoryPage setKeyword={setKeyword} posts={posts} />
 };
 
 export default Story;

@@ -7,12 +7,13 @@ import styles from './StoryPage.module.css'
 
 interface StoryPageProps {
     posts: Post[];
+    setKeyword: React.Dispatch<React.SetStateAction<string>>
 }
 
-const StoryPage:React.FC<StoryPageProps> = ({posts}) => {
+const StoryPage: React.FC<StoryPageProps> = ({posts, setKeyword}) => {
     return (
         <main className={styles.container}>
-            <SearchForm />
+            <SearchForm setKeyword={setKeyword} />
             <PostList posts={posts} size="large" />
         </main>
     );

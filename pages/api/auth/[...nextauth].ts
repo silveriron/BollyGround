@@ -26,7 +26,7 @@ export const authOptions = {
           try {
             global.mongoose = await mongoose.connect(process.env.MONGODB_URL!);
           } catch (e: any) {
-            console.log(e.message);
+            throw new Error(e.message);
           }
         }
 
